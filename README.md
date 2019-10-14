@@ -1,4 +1,6 @@
-A repository of scripts used in McLaughlin et al. Versions are those used in paper.
+# thesis
+
+A repository of scripts used in JF McLaughlin's MS thesis. Versions are as used in the thesis.
 
 find_chrom.py Using BLASTn output (as an .xml), find loci mapped to a specific locus (user-specified) and create an output file excluding them. Initially written to remove Z-linked loci from UCE datasets. Requirements: BioPython, phyluce
 
