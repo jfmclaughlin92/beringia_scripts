@@ -1,6 +1,6 @@
-# thesis
+# beringia_script
 
-A repository of scripts used in JF McLaughlin's MS thesis. Versions are as used in the thesis.
+A repository of scripts used in Beringia pop gen study. Versions as used in submitted manuscript.
 
 find_chrom.py Using BLASTn output (as an .xml), find loci mapped to a specific locus (user-specified) and create an output file excluding them. Initially written to remove Z-linked loci from UCE datasets. Requirements: BioPython, phyluce
 
