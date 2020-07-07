@@ -1,0 +1,28 @@
+### Sample pipeline for sample-size paper
+
+### After preparing your UCE-only reference, align by a per-sample basis:
+
+for i in *R1.fastq.gz;
+do bwa mem UCEreference.fasta $i "${i%R1.fastq.gz}R2.fastq.gz" > "${i%R1.fastq.gz}UCE.sam";
+done
+
+### convert to bam
+
+for i in *.sam;
+do samtools view -bS $i > "${i%.sam}.bam";
+done
+
+### Clean with picard.
+
+for i in *.bam;
+do java -Xmx32g -jar picard.jar CleanSam I=$i O="${i%.bam}-CL.bam";
+done
+
+### Mark read groups
+
+for i in *CL.bam;
+do 
+
+
+### Mark duplicates
+
